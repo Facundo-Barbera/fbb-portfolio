@@ -1,0 +1,43 @@
+# -------------------
+# Python virtualenvs
+# -------------------
+venv/
+.venv/
+*/venv/
+*/.venv/
+
+# Virtualenv common dirs
+env/
+.env/
+*/env/
+*/.env/
+
+# -------------------
+# R environments
+# -------------------
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.renv/
+*/.renv/
+
+# -------------------
+# JetBrains IDE
+# -------------------
+.idea/
+*.iml
+
+# -------------------
+# General OS clutter
+# -------------------
+.DS_Store
+Thumbs.db
+
+# -------------------
+# Logs / cache
+# -------------------
+*.log
+__pycache__/
+*.py[cod]
+*.Rproj
