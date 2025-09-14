@@ -33,8 +33,10 @@ This is not the first time I tried it, but I never could quite understand how to
 I *think* I'm getting the hang of it, but it has a huge learning curve.
 It has been fun to learn, but slow.
 Honestly, I'm using it primarily because I thought nano was a little too... little.
-It's a good tool (and I know people will say "Um... Actually there is this tool...", idc), but I'm so use to IDEs.
-A close friend of mine mentioned that they switched to NVIM some time ago, when I was building my Arch setup it helped me get through some of the configs.
+It's a good tool (and I know people will say "Um... Actually, there is this tool...", idc), but I'm so use to IDEs.
+A close friend of mine mentioned that they switched to NVIM some time ago, when I was building my Arch setup, it helped me get through some of the configs.
+
+Updated: I'm still using NVIM, but now I'm combining it with my normal IDE setup. I use mostly pycharm and other JetBrains IDEs, but I'm using NVIM for editing code inside the IDE's terminal. I also installed IdeaVim, which is a plugin for IntelliJ that adds support for NVIM.
 
 #### Git
 
