@@ -1,0 +1,141 @@
+---
+title: "Activity 1.2"
+author: "Facundo Bautista Barbera"
+format: html
+output: pdf_document
+editor: visual
+---
+
+## Access the cars dataset.
+
+```{r}
+#| output: false
+library("tidyverse")
+library(nortest)
+library(moments)
+```
+
+```{r}
+dataset <- cars
+summary(dataset)
+```
+
+## Create tests
+
+Test the univariate normality of speed and stopping distance. Select at least two of the methods covered in class.
+
+### Shapiro Wilk
+
+```{r}
+shapiro_test <- shapiro.test(dataset$speed)
+print(shapiro_test)
+
+shapiro_test <- shapiro.test(dataset$dist)
+print(shapiro_test)
+```
+
+### Anderson Darling
+
+```{r}
+ad_test <- ad.test(dataset$speed)
+print(ad_test)
+
+ad_test <- ad.test(dataset$dist)
+print(ad_test)
+```
+
+### Kolmogorov Smirnov
+
+```{r}
+lillie_test <- lillie.test(dataset$speed)
+print(lillie_test)
+
+lillie_test <- lillie.test(dataset$dist)
+print(lillie_test)
+```
+
+### Jarque Bera
+
+```{r}
+jarque_test <- jarque.test(dataset$speed)
+print(jarque_test)
+
+jarque_test <- jarque.test(dataset$dist)
+print(jarque_test)
+```
+
+## QQPlot and QQLine
+
+### Speed
+
+```{r}
+qqnorm(dataset$speed, main = "QQ Plot - Speed")
+qqline(dataset$speed, col = "red")
+```
+
+### Dist
+
+```{r}
+qqnorm(dataset$dist, main = "QQ Plot - Dist")
+qqline(dataset$dist, col = "red")
+```
+
+## Skweness and kurtosis
+
+### Speed
+
+```{r}
+skewness(dataset$speed)
+kurtosis(dataset$speed)
+```
+
+### Dist
+
+```{r}
+skewness(dataset$dist)
+kurtosis(dataset$dist)
+```
+
+## Mean, Median, Midrange
+
+### Speed
+
+```{r}
+mean_speed <- mean(dataset$speed)
+median_speed <- median(dataset$speed)
+midrange_speed <- (min(dataset$speed) + max(dataset$speed)) / 2
+
+print(c(mean_speed, median_speed, midrange_speed))
+```
+
+### Dist
+
+```{r}
+mean_dist <- mean(dataset$dist)
+median_dist <- median(dataset$dist)
+midrange_dist <- (min(dataset$dist) + max(dataset
+$dist)) / 2
+
+print(c(mean_dist, median_dist, midrange_dist))
+```
+
+## Boxplot
+
+```{r}
+boxplot(dataset$speed)
+boxplot(dataset$dist)
+```
+
+## Histogram
+
+```{r}
+hist(dataset$speed, probability = TRUE)
+lines(density(dataset$speed), col = "red")
+curve(dnorm(x, mean = mean(dataset$speed), sd = sd(dataset$speed)), from = min(dataset$speed), to = max(dataset$speed), add = TRUE, col = "blue", lwd = 2)
+
+hist(dataset$dist, probability = TRUE)
+lines(density(dataset$dist), col = "red")
+curve(dnorm(x, mean = mean(dataset$dist), sd = sd(dataset$dist)), from = min(dataset$dist), to = max(dataset$dist), add = TRUE, col = "blue", lwd = 2)
+```
+
+The first plot looks like like a normal distribution, with a bit of skewness to the left. The second plot looks very skewed to the right, with a long tail on the right side.

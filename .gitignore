@@ -1,0 +1,11 @@
+# -------------------
+# JetBrains IDE
+# -------------------
+.idea/
+*.iml
+
+# -------------------
+# General OS clutter
+# -------------------
+.DS_Store
+Thumbs.db
