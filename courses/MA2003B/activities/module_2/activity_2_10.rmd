@@ -1,0 +1,94 @@
+---
+title: "Activity 2.10"
+author: "Facundo Bautista Barbera"
+format: html
+output: pdf_document
+---
+
+# Activity 2.10: Exploring multiple Logistic Regression in Regression
+
+## Setup
+
+### Libraries
+```{r}
+#| output: false
+library("tidyverse")
+```
+
+### Load dataset and transform data
+```{r}
+# Load the dataset
+data(mtcars)
+
+# Convert 'am' to factor (0 = auto, 1 = manual)
+mtcars$am <- factor(mtcars$am, labels = c("Automatic", "Manual"))
+```
+
+## Inspect dataset
+```{r}
+# Show first rows
+head(mtcars)
+```
+
+```{r}
+summary(mtcars)
+```
+
+```{r}
+# How many cars are automatic vs manual?
+table(mtcars$am)
+```
+
+## Fit a Multiple Logistic Regression
+```{r}
+model1 <- glm(am ~ mpg + hp + wt, data = mtcars, family = "binomial")
+
+# With the summary we can see what the predictors are
+summary(model1)
+```
+
+The model has a strong Intercept, with a p-value of 0.6943, while the other variables have a p-value lower than 0.5, which reduces the significance of them.
+The variable `mpg` has a coefficient value of: 1.22930.
+
+## Model Evaluation
+
+How much deviance is reduced from the null model?
+
+```{r}
+null_dev <- model1$null.deviance
+residual <- model1$deviance
+
+dev_reduction <- null_dev - residual
+print(dev_reduction)
+```
+
+```{r}
+AIC(model1)
+```
+
+The AIC generally is a good way to measure the difference between models, in this case the value of 16.76611 is slightly high, so we want to compare it against another model.
+
+## Predict probabilities
+
+```{r}
+probabilities <- predict(model1, type = "response")
+predictions <- ifelse(probabilities > 0.5, 1, 0)
+predictions <- factor(predictions, levels = c(0, 1), labels = c("Automatic", "Manual"))
+head(predictions)
+```
+
+```{r}
+table(Predicted = predictions, Actual = mtcars$am)
+```
+
+Almost all of the predictions where good.
+
+## Add more predictors
+
+```{r}
+model2 <- glm(am ~ mpg + hp + wt + disp, data = mtcars, family = "binomial")
+summary(model2)
+AIC(model2)
+```
+
+For this model, the AIC value is higher, so we determine that this model is comparably worst than the first model
