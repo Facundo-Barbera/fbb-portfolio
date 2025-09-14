@@ -1,0 +1,6 @@
+*
+!.gitignore
+!report.tex
+!out/
+out/*
+!out/*.pdf
