@@ -17,4 +17,73 @@
     \end{center}
 
     \section*{Introducción}
+    El desarrollo del proyecto presentó una experiencia para aplicar conocimientos matemáticos, tecnológicos y especialmente estadísticos.
+    La situación que revisamos fue la contaminación atmosférica en la Zona Metropolitana de Monterrey.
+    Este trabajo consistió en tomar datos reales, complejos y con un nivel significativo de inconsistencias para transformarlos en información estructurada y analizable.
+    Esto permitió comprender cómo la estadística aplicada y la programación pueden convertirse en herramientas utiles para apoyar a la toma de decisiones públicas y privadas.
+
+    Este reto también incluyo aprender a comunicar resultados científicos de manera clara, para poder crear explicaciones que sean entendidas por personas que no están tan familiarizadas con el campo y están más interesadas en ver resultados que procesos.
+
+    \section*{Base de datos}
+
+    La información que se uso provino de la Red de Monitoreo Ambiental de Nuevo León (SIMA), la cual integra series temporales con registros horarios de contaminantes (PM10, PM2.5, NO$_2$, NO, CO, O$_3$, SO$_2$, NOx) y variables meteorológicas como la temperatura, humedad, radiación solr, precipitación, presión y viento.
+
+    Los datos originales tienen aproximadamente 779,000 observaciones.
+    La fase de preparación de datos fue un proceso largo y esencial.
+    El procesamiento incluyó los siguientes pasos:
+    \begin{enumerate}
+        \item Unificación de cinco estructuras de datos diferentes.
+        \item Homologación de nombres de variables y códigos de estaciones.
+        \item Eliminación de duplicados.
+        \item Filtrado de outliers por umbrales.
+    \end{enumerate}
+
+    A partir de estas actividades, se construyó un dataframe maestro con 17 columnas estandarizadas, lo cual aseguro trazabilidad y replicabilidad.
+    Me atrevo a decir que esta etapa fue una de las que más aportaciones tuvo de mi parte y estoy satisfecho con la entrega de la misma.
+
+    \section*{Métodos estadísticos y tecnológicos}
+
+    Se implementaron 2 bloques principales en el proyecto: imputación jerárquica de datos y análisis exploratorio de datos.
+
+    \subsection*{Imputación jerárquica de datos faltantes}
+
+    Se diseñó un enfoque de tres niveles:
+    \begin{enumerate}
+        \item Interpolación temporal para brechas cortas (menos de 6 horas).
+        \item Borrowing espacial con estaciones vecinas (entre 6 y 48 horas)
+        \item Eliminar huecos extensos para evitar sesgos.
+    \end{enumerate}
+
+    Este esquema se comparó con tres métodos específicos:
+    \begin{itemize}
+        \item MTB (Mean Top-Bottom): Promedio de valores adyacentes,
+        \item Hearest Neighbour: relleno con observaciones más cercano en el tiempo.
+        \item Iterative (MICE-like): Imputación multivariada.
+    \end{itemize}
+
+    La validación mediante MAE y RMSE mostró que el método MTB ofrecía mejor balance, sin embargo, en casos particulares, rellenaba datos con una media igual a la anterior, lo cual, viéndolo en un gráfico, se mostraba como una linea recta.
+    Finalmente, se utilizó una mezcla entre los 3 metodos, dependiendo de la longitud de la brecha.
+
+    \subsection*{Análisis exploratorio}
+    El análisis exploratorio inicio con estadísticas descriptivas, box plots, y series temporales.
+    Los promedios móviles de 7 horas en contaminantes como el Ozono (O$_3$) y CO fueron útiles para cumplir con criterios normativos y detectar puntos críticos.
+    También se realizaron comparaciones interanuales para identificar variaciones significativas en periodos clave: inicio y fin de pandemia (2020-2021), reactivación económica y situación actual.
+
+    Este proceso requirió integrar conocimientos de programación en Python, utilizando librerías estadísticas y visualización de datos.
+
+    \section*{Resultados}
+
+    Durante la pandemia (2020), las reducciones más visibles, se observaron en contaminantes asociados a tránsito vehicular (NO$_2$, NOx, CO), confirmando el efecto inmediato de la reducción en movilidad.
+    El PM2.5 también disminuyó aunque con picos mas aislados, presuntamente por factores meteorológicos.
+
+    En contraste, durante la reactivación económica en 2024 se alcanzaron niveles críticos de contaminación: el PM2.5 superó con mayor frecuencia umbrales de 50 µg/m$^3$, mientras que NOx y ozono presentaron episodios extremos.
+    Finalmente, en 2025 se observó una mejora parcial, pero sin regresar a los niveles mínimos registrados durante el confinamiento.
+
+    \section*{Conclusión}
+
+    Este proyecto representó una oportunidad real para unir la teoría y la práctica.
+    Aprendí que los métodos estadísticos, más allá de generar números, permiten construir evidencia sólida para interpretar situaciones reales.
+
+    Particularmente estoy muy orgulloso de los procesos de limpieza de los datos y creo que más allá del impacto científico que tuvieron para el proyecto, creo que son de suma importancia para que este tipo de experimentos sean reproducibles.
+
 \end{document}
