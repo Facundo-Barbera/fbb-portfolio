@@ -1,6 +1,12 @@
+# This gitignore is specifically for this course's report.
+# First ignore all
 *
+
+# The modify the ignore
 !.gitignore
 !report.tex
 !out/
+
+# Finally remove all from /out and add the pdf files only.
 out/*
 !out/*.pdf
