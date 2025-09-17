@@ -1,0 +1,49 @@
+---
+title: "Activity 1.7: Factor Analysis 1"
+author: "Facundo Bautista Barbera"
+format: html
+output: html_document
+---
+
+# Load libraries
+
+```{r}
+#| output: false
+library(tidyverse)
+library(psych)
+library(polycor)
+library(ggcorrplot)
+```
+
+# Load dataset
+
+```{r}
+# Load the CSV into a matrix
+data <- read_csv("datoslago.csv")
+summary(data)
+```
+
+# Get correlation matrix
+
+```{r}
+# Get the correlation matrix
+corr_matrix <- corr.test(data, adjust = "none")
+print(corr_matrix)
+```
+
+## Plot correlation matrix
+
+```{r}
+corr_matrix <- cor(data)
+
+ggcorrplot(corr_matrix, type = "lower", lab = TRUE)
+```
+
+## Correlation Matrix interpetetation
+
+The correlation matrix shows strong correlations on the following pairs:
+- Proteinas -> Tamano (0.63)
+- LnProteinas -> Tamano (0.84)
+- LnProteinas -> Proteinas (0.78)
+- LnTamano -> Proteinas (0.57)
+- LnTamano -> Tamano (0.97)

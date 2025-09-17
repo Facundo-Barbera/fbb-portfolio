@@ -1,0 +1,73 @@
+---
+title: "study"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+cars <- data.frame(mtcars)
+```
+
+```{r}
+model <- lm(mpg ~ wt, data = cars)
+summary(model)
+```
+
+1.  Lineal: The high values on the F-statistic and the low values on the p-value demonstrates that the model is indeed lineal.
+
+```{r}
+par(mfrow = c(2, 2))
+plot(model)
+```
+
+2.  Homo: Given that the residuals vs fitted line shows a random scatter and the variance is constant, we can determine that the model has homoscedasticity.
+3.  Multivariate normality: Given that all the errors are closed to the line the Q-Q residuals plot we can determine that we have a normal distribution for residuals.
+4.  Independence of observations: Again, given that the residuals vs fitted line shows no pattern we can determine that the model has independence of observations.
+5.  Lack of multidisciplinary: Since this is a simple linear regression, there is no multidisciplinary (x vs y only)
+
+```{r}
+model <- lm(mpg ~ wt, data = cars)
+hat_values <- hatvalues(model)
+p <- length(coef(model))
+n <- nrow(mtcars)
+threshold <- 2 * p / n
+names <- rownames(mtcars)
+
+# Order by wt
+ordered_indices <- order(mtcars$wt)
+x_ordered <- mtcars$wt[ordered_indices]
+hat_ordered <- hat_values[ordered_indices]
+names_ordered <- names[ordered_indices]
+
+# Plot side-by-side
+par(mfrow = c(1, 2))
+
+# First plot
+plot(x_ordered, hat_ordered,
+     type = "b",
+     pch = 19,
+     col = "blue",
+     xlab = "Ordered wt (Weight)",
+     ylab = "Hat values (Leverage)",
+     main = "Hat Values vs Ordered wt")
+abline(h = threshold, col = "red", lty = 2)
+text(x_ordered[hat_ordered > threshold],
+     hat_ordered[hat_ordered > threshold],
+     labels = names_ordered[hat_ordered > threshold],
+     pos = 3, cex = 0.8, col = "darkred")
+
+# Second plot
+plot(hat_values, type = "h",
+     main = "Leverage Values",
+     ylab = "Leverage",
+     xlab = "Observation Index")
+abline(h = threshold, col = "red", lty = 2)
+high_lev_indices <- which(hat_values > threshold)
+text(x = high_lev_indices,
+     y = hat_values[high_lev_indices],
+     labels = names[high_lev_indices],
+     pos = 3, cex = 0.8, col = "darkred")
+```
