@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.16)  16 SEP 2025 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.16)  18 SEP 2025 19:05
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -174,7 +173,7 @@ LaTeX Info: Redefining \lslig on input line 944.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
  (/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
+File: microtype.cfg 2025/07/09 v3.2b microile: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
 ) (/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -189,7 +188,8 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
  (/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+)
+(/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
  (/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
@@ -242,7 +242,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen163
- (/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+ (/Usertexmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
@@ -324,6 +324,7 @@ LaTeX Info: Redefining \% on input line 21.
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/1-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Info: Redefining \microtypecontext on input line 21.

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1758086545.99741 "main.tex" "out/main.pdf" "main" 1758086546.46643 0
+["pdflatex"] 1758243937.09237 "main.tex" "out/main.pdf" "main" 1758243937.70987 0
   "/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1136768653 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
   "/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -89,9 +89,9 @@
   "/Users/facundobautistabarbera/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1758085275 336894 760d50f3451d5b0b3fe35fdca1b1307b ""
   "/Users/facundobautistabarbera/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1758085315 2266419 1c67f9cdc065bf068a0b8ac50f8d1798 ""
   "/Users/facundobautistabarbera/Library/TinyTeX/texmf.cnf" 1756781882.78333 701 22b24dc332177b20efa28d1d166c5bff ""
-  "main.tex" 1758086545.89062 10495 c4edf71bf7ef27ec3ee20fa7d71d7caa ""
-  "out/main.aux" 1758086546.38807 362 a60e22da3321aa78ccb72232e186c2b6 "pdflatex"
-  "out/main.out" 1758086546.3196 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1758243936.4465 10158 fd87d7721b20d8be00e1c0e1679091fa ""
+  "out/main.aux" 1758243937.61734 362 a60e22da3321aa78ccb72232e186c2b6 "pdflatex"
+  "out/main.out" 1758243937.54119 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "out/main.aux"
   "out/main.log"

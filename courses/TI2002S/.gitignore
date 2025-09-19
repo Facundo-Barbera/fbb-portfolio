@@ -1,1 +1,35 @@
+# TeX and LaTeX intermediate files
+*.aux
+*.bcf
+*.bbl
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lol
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.synctex.gz(busy)
+*.toc
+*.vrb
+*.xdv
+
+# latexmk and latex-workshop
+*.latexmk
+latexmk.log
+
+# Build output directories — keep produced PDFs
+out/*
+!out/*.pdf
+**/out/*
+!**/out/*.pdf
 
