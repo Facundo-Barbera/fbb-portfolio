@@ -1,0 +1,168 @@
+%! Author: Facundo Bautista Barbera
+%! Date: 2025-09-19
+%! TEX root = main.tex
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xurl}
+\usepackage{hyperref}
+
+\renewcommand{\refname}{References}
+
+\title{Previous Work}
+\author{
+    Nahim Giovanni Cruz Cordova A00819343 \and
+    Emiliano Constante Pecina A01383193 \and
+    Facundo Bautista Barbera A01066843
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+
+The rapid advancement of artificial intelligence (AI) technologies is fundamentally transforming engineering disciplines, with mechanical engineering standing at the forefront of this technological revolution. As AI continues to evolve, its integration into mechanical engineering practices presents unprecedented opportunities to enhance design efficiency, optimize manufacturing processes, and improve system performance across various applications.
+
+This work explores the intersection of artificial intelligence and mechanical engineering, examining how AI technologies can augment and enhance the capabilities of mechanical engineers in their professional practice. Through a comprehensive analysis of current research and emerging trends, this study investigates the potential of AI to revolutionize traditional mechanical engineering approaches while identifying the key areas where these technologies can provide the most significant impact.
+
+\section*{Previous Work}
+
+\subsection*{Gear Design and Manufacturing}
+
+\subsubsection*{Hybrid CNC for Straight Bevel Gears}
+Song et al. \cite{song2025cnc} proposed a computer numerical control (CNC) machining technique for straight bevel gears based on hypocycloidal movement.
+The method converts non-continuous cutting into a continuous indexing operation that can be executed on general-purpose five-axis machines, eliminating the need for specialized equipment.
+The proposal uses end milling to cut teeth and allows adjustment of the cutting edge position to reduce form errors.
+The study demonstrates that the scheme reduces cost and improves efficiency by allowing a gear with four cutting segments to be manufactured in a single continuous cycle.
+
+\subsubsection*{Reliability Analysis of Gear-Bearing Systems}
+Song et al. \cite{song2025reliability} developed a dynamic model for gear and bearing systems that includes manufacturing and installation errors and applied Chebyshev interval analysis to evaluate reliability.
+The study showed that the initial bearing clearance affects dynamic characteristics more than gear clearance; when increasing bearing interference at low speed, reliability decreases and large clearance deviation causes abnormal vibrations at high speed.
+This approach quantifies how manufacturing tolerances influence vibration and provides criteria for prioritizing parameter control in design.
+
+\subsubsection*{Gear Finishing for High Speed and Low Noise}
+Budzisz and Marciniec \cite{budzisz2022finishing} analyzed the progress of gear finishing techniques (grinding and honing) directed at high-speed and low-noise gears, especially in electric vehicles.
+The study emphasizes that finishing modifies tooth flanks, compensates errors, and controls surface texture to decrease noise.
+Additionally, the article mentions that increasing electrification demands precision gears of grade 4-6 and that finishing techniques influence dynamic performance and wear reduction.
+
+\subsubsection*{Profile Modification to Reduce Transmission Error}
+Abruzzo et al. \cite{abruzzo2023profile} proposed an iterative algorithm that modifies the profile of spur gears to minimize static transmission error and improve dynamic behavior.
+Using finite element models and lumped parameters, they demonstrated that modification reduces dynamic overload and noise, while decreasing the volume of material removed.
+The study concludes that manufacturing-oriented design can achieve quieter gears without increasing cost or weight.
+
+\subsubsection*{Multi-objective Optimization of Polymer Gears}
+Elsiedy et al. \cite{elsiedy2024multi} presented a multi-objective optimization of polyoxymethylene (POM) spur gears combining a multi-objective genetic algorithm and sequential quadratic programming.
+The objective functions were to minimize weight and power loss, and five design variables were optimized under stress, temperature, and wear constraints.
+Results show an 82.67\% reduction in weight and 31.39\% reduction in power loss compared to single-objective optimization.
+The methodology provides a set of Pareto solutions from which the designer can choose according to the application.
+
+\subsubsection*{Cam-Elliptical Gear Mechanism for Labeling}
+Zhang et al. \cite{zhang2024cam} proposed a labeling mechanism for vegetables that combines elliptical gears and a cam, with hypocycloidal trajectories.
+A kinematic model was built and the NSGA-II algorithm was employed to optimize parameters, generating 80 Pareto solutions; the entropy-weight TOPSIS method was used as secondary optimization to select the best configuration.
+After optimization, the suction cup positioning error decreased from 1.3 mm to 0.12 mm and the labeling speed was reduced from 0.1077 m/s to 0.0037 m/s.
+
+\subsubsection*{Stiffness versus Dynamics Optimization}
+Marafona \cite{marafona2024stiffness} analyzed gear optimization comparing coupling stiffness and dynamic behavior using genetic algorithms.
+A macro-geometric design problem was formulated with two objective functions—mesh stiffness and vibration reduction—and concluded that genetic algorithms achieve an effective balance between both criteria, although they involve high computational cost.
+The study highlights that the choice of objective function notably affects the final result.
+
+\subsubsection*{Mathematical Perspective of Gear Design}
+Litvin \cite{litvin1995applied} offers a mathematical synthesis of involute gear geometry, explaining concepts such as the base curve, module, and line of action.
+The author describes how tooth action ensures constant torque through continuous contact along the line of engagement.
+The text is complemented with examples to illustrate the theory.
+
+\subsection*{Hydraulic Systems and Fluid Mechanics}
+
+\subsubsection*{Probabilistic Framework for Pipe Failures}
+Tang et al. \cite{tang2024probabilistic} developed a probabilistic framework to identify factors that influence pipe failures in water distribution networks.
+They employed a factor selection algorithm for categorical and numerical variables, based on Bayes' theorem, and applied the method to the Hong Kong network.
+They found that galvanized iron and polyethylene pipes are most prone to failure and that pressure, age, and length significantly influence the probability of rupture.
+
+\subsubsection*{Impact of Material on Water Hammer}
+Zhang et al. \cite{zhang2024waterhammer} studied how different pipe materials affect overpressure caused by water hammer in pressurized conduits.
+Using experiments and numerical simulations, they compared galvanized steel, copper, PVC, polypropylene (PPr), and glass fiber reinforced plastic pipes.
+They concluded that materials with low elastic modulus like PPr and PVC reduce the amplitude and duration of water hammer compared to steel.
+The study also emphasizes that fluid-structure interaction must be considered in numerical models.
+
+\subsubsection*{Pipeline Connection Reinforcement through Additive Manufacturing}
+Ma et al. \cite{ma2025awam} investigated the use of arc welding additive manufacturing (AWAM) to reinforce pipe joints subjected to high pressure.
+By optimizing the thickness, length, and radius of the coating applied through AWAM, they managed to increase the strength and stiffness of connections and reduce deformations under load.
+The methodology allowed pipes to withstand higher pressures without failing and suggests that additive manufacturing can extend the service life of critical infrastructure.
+
+\subsubsection*{Indirect Cooling System for Heating Plants}
+Dračko et al. \cite{dracko2024cooling} describe an indirect closed-loop cooling system for thermal power plants that need to reduce water consumption due to supply restrictions.
+The proposal uses river water in a closed loop and calculates parameters such as pipe diameter, flow velocity, and line location.
+The study concludes that closed systems decrease losses due to evaporation and purging and are cost-effective when it is not possible to install dry or hybrid cooling towers.
+
+\subsection*{Manufacturing Process Selection}
+
+\subsubsection*{Environmental Assessment of Hot Extrusion versus Machining}
+Ingarao et al. \cite{ingarao2014lca} compared the hot extrusion process with traditional machining to manufacture an aluminum axial component using life cycle assessment (LCA).
+The research quantified energy consumption, material use, and environmental impact of each process, including the manufacture of extrusion dies and turning tools.
+It was concluded that hot extrusion has environmental advantages when considering near-net-shape part production, while machining presents greater flexibility but generates more waste and energy consumption.
+
+\subsubsection*{Comparison of Metal Manufacturing Processes}
+O'Neill \cite{oneill2023metal} published a comprehensive article comparing machining, forging, casting, additive manufacturing, and extrusion, describing their principles, advantages, and disadvantages.
+Machining is valued for its precision and ability to produce varied geometries, although it can only machine one face at a time and can be expensive for hard materials.
+Forging produces parts with great strength thanks to grain flow conservation, but requires expensive equipment and specific dies.
+Casting allows manufacturing complex shapes through disposable or permanent molds, but may present defects and lower strength.
+
+\subsubsection*{Technological Aspects of Gear Machining and Control}
+Boral et al. \cite{boral2023technological} review gear machining and control technologies, describing the use of CNC machinery and coordinate measurement systems.
+The introduction emphasizes that gears are used in machinery, vehicles, aerospace, and medical devices, and that the selection of tooth profile—involute, cycloidal, epicycloidal—is crucial for their correct operation.
+The article also discusses advances in inspection through coordinate measuring machines and the importance of evaluating profile and flank accuracy.
+
+\subsection*{Optimization and Improvement of Mechanical Systems}
+
+The optimization studies presented in previous sections also contribute to mechanical system improvement.
+The multi-objective optimization of polyoxymethylene gears \cite{elsiedy2024multi} demonstrates how hybrid algorithms can drastically reduce weight and power losses in plastic gears.
+This approach shows how the combination of material models and optimization heuristics can increase the power density of lightweight transmissions, contributing to more efficient systems.
+
+The cam-elliptical gear mechanism \cite{zhang2024cam} optimizes the suction trajectory and reduces maximum velocity and acceleration.
+This optimization improves precision and minimizes mechanism wear, which constitutes an example of how multi-objective algorithms can improve mechanical systems.
+
+The study on stiffness versus dynamics \cite{marafona2024stiffness} focuses on macro-geometric optimization of gears.
+Comparing different objective functions allows balancing increased stiffness with vibration reduction, improving system reliability and efficiency.
+
+\section*{Methodology}
+
+Building upon the comprehensive review of current research in gear design, hydraulic systems, and manufacturing processes presented in the previous section, this study adopts a systematic approach to examine the transformative potential of artificial intelligence in mechanical engineering.
+
+This work is based on the analysis of how artificial intelligence can enhance the mechanical engineer career.
+To achieve this, a series of academical articles where reviewed, along with case studies and applications of AI in fields, connect closely with the professional training of a mechanical engineer.
+Some of the most notorious tools are computer-aided design (CAD), structural analysis, materials testing and manufacturing systems, tools in which AI and generative AI can aid substantially.
+The methodology also included reflecting on the ways AI complements human creativity and problem-solving, highlighting its role as a supportive tool.
+
+\section*{Discussion}
+
+In the career of a mechanical engineering, artificial intelligence is becoming a powerful ally across multiple areas.
+During the design stage, AI-driven optimization tools allow for testing and refining countless of design alternatives much faster than traditional methods, leading to lighter, stronger and more cost-effective structures.
+This means projects can be approached with greater efficiency while ensuring innovative solutions.
+
+In the are of manufacturing and production, AI systems can monitor machines in real time, even using non-generative AI to predict failures before they occur, and adjust processes to minimize waster.
+As an engineer, this represents an opportunity to not only improve productivity but also to contribute to more sustainable practices, reducing costs and environmental impact at the same time.
+
+When it comes to simulation and testing, AI enable the creation of advanced digital models that can replicate real-life conditions with high precision.
+Instead of relying only on expensive or risky physical trials, we can now count on virtual validation of mechanical components, saving time and resources.
+This directly enhances the ability to propose safer, more reliable and competitive engineering solutions.
+
+
+\section*{Conclusions}
+
+Artificial intelligence will significantly shape the mechanical engineering career by transforming how engineer design, analyze, and create mechanical systems.
+The ability to make faster and more accurate decision, optimizes resources and contribute to the development of sustainable technologies are key aspects of integrating AI into this career.
+For students this also means being better prepared for the demands of modern industry, where efficiency and innovation are critical.
+In conclusion, AI is not replacement for engineers but a strategic complement that amplifies professional skills.
+
+\newpage
+\bibliographystyle{plain}
+\nocite{*}
+\bibliography{references/references}
+
+\end{document}
