@@ -1,0 +1,153 @@
+%! Author: Facundo Bautista Barbera
+%! Date: 2025-09-17
+%! TEX root = main.tex
+
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xurl}
+\usepackage{hyperref}
+\renewcommand{\refname}{References}
+
+\title{Designing and Manufacturing a Gear, A Step-by-Step Scientific Essay}
+\author{
+    Nahim Giovanni Cruz Cordova A00819343 \and
+    Emiliano Constante Pecina A01383193 \and
+    Facundo Bautista Barbera A01066843
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+
+Gears are essential power transmission elements in mechanical engineering.
+They transform torque and speed, transmit motion with precision, and ensure reliability in countless industrial systems.
+Proper design and manufacturing of gears require a systematic approach that integrates geometry, material science, load analysis, and production technologies.
+
+\section*{Previous Work}
+
+The design and manufacturing of gears have been widely studied due to their central role in mechanical systems.
+Various works highlight the classification of gears like spur, helical, bevel, and worm—emphasizing that the selection of gear type depends on torque, speed, and geometrical constraints.
+Fundamental geometric parameters include:
+
+\begin{itemize}
+	\item \textbf{Pitch diameter:}
+	      \[
+		      D = m \cdot Z
+	      \]
+
+	\item \textbf{Circular pitch:}
+	      \[
+		      p = \pi \cdot m
+	      \]
+
+	\item \textbf{Center distance:}
+	      \[
+		      a = \frac{D_1 + D_2}{2} = \frac{m(Z_1 + Z_2)}{2}
+	      \]
+\end{itemize}
+
+These define gear kinematics and meshing.
+Manufacturing methods range from traditional hobbing, shaping, and broaching to modern CNC InvoMilling.
+Material selection commonly involves alloy steels with surface hardening (carburizing, nitriding) to balance wear resistance and toughness.
+Standards like ISO 6336 and AGMA guide strength verification and load capacity ratings.
+
+\section*{Methodology}
+
+\subsection*{Specification}
+
+Defining the torque, speed, gear ratio, duty cycle, environment and geometric constraints.
+This step determines the type of gear suitable for the application
+
+\subsection*{Gear type and geometry selection}
+
+Select which the gear family (spur, helical, bevel, worm) based on space and performance requirements. Determine module $m$ number of teeth $Z$ and pressure angle $\alpha$.
+Then calculate:
+
+$$
+	D = m \times Z
+$$
+
+$$
+	p = \pi \times m
+$$
+
+$$
+	\alpha = \frac{D_1 + D_2}{2} = \frac{m(Z_1 + Z_2)}{2}
+$$
+
+\subsection*{Load and Stress Analysis}
+
+Convert transmitted torque $T$ into tangential force at the pitch circle:
+
+$$
+	F_t = \frac{2T}{D}
+$$
+
+Estimate the bending stress at the tooth root using Lewis' equation:
+
+$$
+	\sigma b = \frac{Ft}{b \times m \times Y}
+$$
+
+Where:
+\begin{itemize}
+	\item $b$ is the face width in millimeters
+	\item $m$ is the module in millimeters per tooth
+	\item $Y$ is Lewis form factor (from tables, depending on tooth number and geometry)
+\end{itemize}
+
+\subsection*{Material and Heat Treatment Selection}
+
+Choose steels with appropriate surface treatment to improve wear resistance while preserving the core toughness.
+Examples: carburizing, nitriding, or through-hardening.
+
+\subsection*{Detailed Geometry and Profile Considerations}
+
+Define addendum, dedendum, pressure angle, and face width. Ensure contact ratio $\geq 1.2$ for continues engagement. For helical gears, calculate helix angle $\beta$ and resulting axial forces on bearings.
+
+\subsection*{Manufacturing process}
+
+Select hobbing for mass production, shaping and broaching for internal gears, and CNC milling for flexible batches. Plan heat treatment and finishing operations (grinding, lapping).
+
+\subsection*{Quality control}
+
+Inspect pitch diameter, runout, and profile accuracy with coordinate measuring machines. Verify contact pattern, backlash, hardness, and conduct dynamic load test.
+
+\section*{Discussion}
+
+The design of a gear involves balancing size, strength and durability. Large modules increase tooth strength but reduce compactness.
+Surface treatments improve durability but can induce distortion, requiring finishing corrections.
+Geometric factors like undercutting and contact ratio are critical in small pinions; corrective measures include profile shifting or increasing pressure angle.
+Compliance with ISO 6336 and AGMA ensures international performance standards.
+
+\section*{Conclusions}
+
+The methodology for designing and manufacturing gears requires a systematic approach, which ensures reliable performance under operating conditions.
+Beginning with the definition of specifications, the engineer must carefully select the gear type and determine its geometry in order to guarantee precision in motion transmission.
+The correct choice of material and heat treatment directly influences resistance to bending and surface fatigue.
+While the selected manufacturing method must be compatible with production volume and the level of precision require, quality control servers as a final step to validate that the gear meets design tolerances and functional requirements.
+Ultimately, adherence to the international standards, provides the necessary framework to confirm load capacity, safety, and durability, establishing a robust foundation for the integration of gears in mechanical systems.
+
+\subsection*{AI prompt}
+
+For the realization of this project we used the following prompt:
+
+Prompt: “En la creación del diseño de un engranaje, cuales son los principales puntos en los cuales me tengo que enfocar y sus ecuaciones para poder diseñarlo, mejorar su uso y después dame para su fabricación.”
+
+Para este caso solamente tome la idea de la respuesta que me dio Chat GPT acerca de los requerimientos principales en los cuales nos tenemos que enfocar para poder realizar el diseño y fabricación de un engranaje, el resultado que me dio con el Prompt en si me ayudo a saber con que empezar y mediante esa idea pude comenzar el proyecto del diseño y fabricación de un engranaje.
+
+
+\newpage
+\bibliographystyle{plain}
+\nocite{*}
+\bibliography{references/references}
+
+
+\end{document}

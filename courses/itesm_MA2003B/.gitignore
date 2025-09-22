@@ -1,0 +1,21 @@
+# R session files
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio files
+.Rproj.user/
+
+# renv local folders
+renv/library/
+renv/staging/
+
+# Environment config
+.Renviron
+.Rprofile
+
+# Knit/markdown caches and generated docs
+*.utf8.md
+*.knit.md
+cache/
+*/cache/

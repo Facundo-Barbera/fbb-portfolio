@@ -1,0 +1,33 @@
+---
+title: "Activity 1.1: Matrices and Statistics"
+author: "Facundo Bautista Barbera"
+---
+
+# Playing with matrices in R
+
+## Problem 1
+
+```{r}
+matrix_a <- matrix(c(2, 0, 9, 4, -2, 0, -3, 5, 6), nrow = 3, byrow = TRUE)
+matrix_b <- matrix(c(8, -7, -3, 6, 9, 5, -2, -5, 1), nrow = 3, byrow = TRUE)
+```
+
+```{r}
+print(matrix_a + matrix_b)
+
+print(4 * matrix_a + 3 * matrix_b)
+
+print(t(matrix_a))
+
+print(solve(matrix_a))
+
+print(det(matrix_a))
+print(det(t(matrix_a)))
+```
+
+## Problem 2
+
+```{r}
+matrix_a <- matrix(c(2, 3, 4, 1, 0, 5, 3, -2, 0, -3, -1, -5), nrow = 3, byrow = TRUE)
+matrix_b <- matrix(c(4, -3, 5, 8, 2, 1, -2, 0), nrow = 4, byrow = TRUE)
+```
