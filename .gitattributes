@@ -7,7 +7,6 @@
 *.npz    filter=lfs diff=lfs merge=lfs -text
 *.pt     filter=lfs diff=lfs merge=lfs -text
 *.csv    filter=lfs diff=lfs merge=lfs -text
-
 # Common binaries (images, archives, etc.)—optional
 *.zip    filter=lfs diff=lfs merge=lfs -text
 *.zst    filter=lfs diff=lfs merge=lfs -text
