@@ -17,7 +17,7 @@ I don't care, I want to do this myself, however I want to.
 ### What is my current working environment
 
 For school projects I'm using JetBrains IDEs, GitHub, and many other convencional tools.
-Specifically for *this* project I created a VM with Arch, and manually configured it.
+Specifically for _this_ project I created a VM with Arch, and manually configured it.
 It was a long and painful process (took me like 2 days) but I have found a good configuration that I like.
 Originally, I planned to use the CLI only Arch version, which was working fine, but since I'm in a VM and I do want to use a browser, I wanted to have a tool to copy an paste.
 I ended up using a custom X11 with XTerm configuration.
@@ -30,7 +30,7 @@ Configuring Arch was challenging, coming from a spot where my only interactions 
 
 I'm using NVIM!
 This is not the first time I tried it, but I never could quite understand how to use it.
-I *think* I'm getting the hang of it, but it has a huge learning curve.
+I _think_ I'm getting the hang of it, but it has a huge learning curve.
 It has been fun to learn, but slow.
 Honestly, I'm using it primarily because I thought nano was a little too... little.
 It's a good tool (and I know people will say "Um... Actually, there is this tool...", idc), but I'm so use to IDEs.
@@ -38,12 +38,13 @@ A close friend of mine mentioned that they switched to NVIM some time ago, when 
 
 Updated: I'm still using NVIM, but now I'm combining it with my normal IDE setup. I use mostly pycharm and other JetBrains IDEs, but I'm using NVIM for editing code inside the IDE's terminal. I also installed IdeaVim, which is a plugin for IntelliJ that adds support for NVIM.
 
+Updated again: Fuck IDE's, the use too many resources for the same things I can do in NVIM and a good terminal setup.
+
 #### Git
 
 Obvious tool when using repositories, and in general, coding, I guess.
-But I never really *used* git, I've always relied on visual tools to do stuff for me.
+But I never really _used_ git, I've always relied on visual tools to do stuff for me.
 I want to dive into actually using it in the command line and working projects with lots of files in jus the terminal.
-
 
 ## Notes
 
