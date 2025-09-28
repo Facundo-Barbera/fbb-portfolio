@@ -1,0 +1,102 @@
+%! Author: Facundo Bautista Barbera
+%! Date: 2025-09-26
+%! TEX root = main.tex
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+
+\title{Capítulo 1}
+\author{Facundo Bautista Barbera}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Problema}
+
+Alden Construction está compitiendo contra Forbes Construction en una licitación para un proyecto. Alden considera que la oferta de Forbes, denotada por $B$, es una variable aleatoria con la siguiente función de probabilidad:
+
+$$
+	P(B = 6000) = 0.40,\quad
+	P(B = 8000) = 0.30,\quad
+	P(B = 11000) = 0.30.
+$$
+
+Se sabe que el costo de Alden para completar el proyecto es de \$6{,}000. Se pide
+utilizar los criterios de decisión vistos en clase (maximin, maximax, minimax con
+arrepentimiento y valor esperado) para determinar la oferta que debe presentar Alden.
+
+En caso de empate entre las ofertas, Alden gana la licitación.
+
+\textbf{Sugerencia:} Sea $p$ la oferta de Alden. Considere los siguientes intervalos:
+
+\[
+	p \leq 6000,\quad
+	6000 < p \leq 8000,\quad
+	8000 < p \leq 11000,\quad
+	p > 11000,
+\]
+
+y determine en cada caso la ganancia de Alden en función de su propia oferta $p$ y de la oferta de Forbes $B$.
+
+\newpage
+
+Tabla de utilidades
+
+\begin{tabular}{c|ccc}
+	\text{Oferta de Alden } (p) & B=6000 & B=8000 & B=11000 \\
+	\hline
+	5000                        & -1000  & -1000  & -1000   \\
+	6000                        & 0      & 0      & 0       \\
+	7000                        & 0      & 1000   & 1000    \\
+	8000                        & 0      & 2000   & 2000    \\
+	9000                        & 0      & 0      & 3000    \\
+	10000                       & 0      & 0      & 4000    \\
+	11000                       & 0      & 0      & 5000    \\
+	12000                       & 0      & 0      & 0       \\
+\end{tabular}
+
+Tabla de arrepentimiento
+
+\begin{tabular}{c|ccc}
+	\text{Oferta de Alden } (p) & B=6000 & B=8000 & B=11000 \\
+	\hline
+	5000                        & 1000   & 3000   & 6000    \\
+	6000                        & 0      & 2000   & 5000    \\
+	7000                        & 0      & 1000   & 4000    \\
+	8000                        & 0      & 0      & 3000    \\
+	9000                        & 0      & 2000   & 2000    \\
+	10000                       & 0      & 2000   & 2000    \\
+	11000                       & 0      & 2000   & 2000    \\
+	12000                       & 0      & 2000   & 5000    \\
+\end{tabular}
+
+Valor esperado
+
+\begin{tabular}{c|c}
+	\text{Oferta de Alden } (p) & \text{Valor esperado} \\
+	\hline
+	5000                        & -1000                 \\
+	6000                        & 0                     \\
+	7000                        & 600                   \\
+	8000                        & 1200                  \\
+	9000                        & 900                   \\
+	10000                       & 1200                  \\
+	11000                       & 1500                  \\
+	12000                       & 0                     \\
+\end{tabular}
+
+\subsection*{Resultados}
+
+Para la tabla de utilidades:
+\begin{itemize}
+	\item Para maximin, el valor maximo de los minimos es $0$ para una oferta de $11000$.
+	\item Para maximas, el valor maximo de los maximos es $5000$ para una oferta de $11000$.
+	\item Para minimax con la tabla de arrepentimiento, el valor es $2000$ para una oferta $11000$.
+	\item Para el valor esperado, el valor es de $1500$ para una oferta de $11000$.
+\end{itemize}
+\end{document}
