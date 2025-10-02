@@ -1,0 +1,87 @@
+%! Author: Facundo Bautista Barbera
+%! Date: 2025-09-29
+%! TEX root = actividad_2_mr.tex
+
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\title{Actividad 2 MR}
+\author{Facundo Bautista Barbera}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Problema}
+
+Una computadora se inspecciona cada hora.
+Se encuentra que está trabajando o que está descompuesta.
+En el primer caso, la probabilidad de que siga así la siguiente hora es de 0.95. Si está descompuesta, se repara, lo que puede llevar más de una hora, Siempre que la computadora esté descompuesta (sin importar cuanto tiempo pase), la probabilidad de que siga descompuesta una hora más es de 0.5.
+
+
+\subsection*{Matriz de transición}
+
+$$
+	P = \begin{bmatrix}
+		0.95 & 0.05 \\
+		0.50 & 0.50
+	\end{bmatrix}
+$$
+
+\newpage
+\subsection*{Estado estable}
+
+Donde $\pi_1$ representa el estado de la computadora funcionando y $\pi_2$ representa el estado descompuesta.
+
+Sistema de ecuaciones:
+$$
+	\begin{cases}
+		\pi_1 = 0.95\,\pi_1 + 0.50\,\pi_2 \\
+		\pi_2 = 0.05\,\pi_1 + 0.50\,\pi_2 \\
+		\pi_1 + \pi_2 = 1
+	\end{cases}
+$$
+
+Simplificando las primeras dos ecuaciones:
+$$
+	\begin{cases}
+		0 = -0.05\,\pi_1 + 0.50\,\pi_2 \\
+		0 = 0.05\,\pi_1 - 0.50\,\pi_2  \\
+		\pi_1 + \pi_2 = 1
+	\end{cases}
+$$
+
+De la primera ecuación:
+$$
+	0.05\,\pi_1 = 0.50\,\pi_2
+$$
+
+$$
+	\pi_1 = \frac{0.50}{0.05}\,\pi_2 = 10\,\pi_2
+$$
+
+Sustituyendo en la tercera ecuación:
+$$
+	10\,\pi_2 + \pi_2 = 1
+$$
+
+$$
+	11\,\pi_2 = 1
+$$
+
+$$
+	\pi_2 = \frac{1}{11}
+$$
+
+Sustituyendo $\pi_2$ en $\pi_1 = 10\,\pi_2$:
+$$
+	\pi_1 = 10 \cdot \frac{1}{11} = \frac{10}{11}
+$$
+
+$$
+	\pi = \left( \tfrac{10}{11}, \; \tfrac{1}{11} \right)
+$$
+
+
+\end{document}
