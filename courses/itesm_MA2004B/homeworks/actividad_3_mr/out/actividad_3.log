@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.16)  2 OCT 2025 16:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.16)  2 OCT 2025 16:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**actividad_2_mr.tex
-(./actividad_2_mr.tex
+**actividad_3.tex
+(./actividad_3.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
 (/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -90,48 +90,51 @@ LaTeX Info: Redefining \] on input line 2950.
 ) (/Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count295
-) (out/actividad_2_mr.aux)
-\openout1 = `actividad_2_mr.aux'.
+) (out/actividad_3.aux)
+\openout1 = `actividad_3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+Overfull \hbox (30.57059pt too wide) detected at line 33
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Y[]; ^^Y[]; ^^Y[]\OT1/cmr/m/n/10 ) = (0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 75\OML/cmm/m/it/10 ^^Y[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ^^Y[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 125\OML/cmm/m/it/10 ^^Y[]; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ^^Y[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 75\OML/cmm/m/it/10 ^^Y[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 125\OML/cmm/m/it/10 ^^Y[]; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 15\OML/cmm/m/it/10 ^^Y[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 05\OML/cmm/m/it/10 ^^Y[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 75\OML/cmm/m/it/10 ^^Y[]\OT1/cmr/m/n/10 )
+ []
+
 
 
 [1
 
-{/Users/facundobautistabarbera/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-[2] (out/actividad_2_mr.aux)
+{/Users/facundobautistabarbera/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (out/actividad_3.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1174 strings out of 469722
- 18018 string characters out of 5477714
- 433298 words of memory out of 5000000
- 29625 multiletter control sequences out of 15000+600000
- 631900 words of font info for 58 fonts, out of 8000000 for 9000
+ 1144 strings out of 469722
+ 17598 string characters out of 5477714
+ 436298 words of memory out of 5000000
+ 29604 multiletter control sequences out of 15000+600000
+ 627884 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,7n,65p,331b,199s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on out/actividad_2_mr.pdf (2 pages, 85596 bytes).
+ 56i,7n,65p,797b,120s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/facundobautistabarbera/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on out/actividad_3.pdf (1 page, 57691 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 33 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

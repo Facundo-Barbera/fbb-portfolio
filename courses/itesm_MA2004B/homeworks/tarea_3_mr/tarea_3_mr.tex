@@ -1,0 +1,112 @@
+%! Author: Facundo Bautista Barbera
+%! Date: 2025-10-12
+%! TEX root = tarea_3_mr.tex
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[spanish]{babel}
+
+\title{Tarea 3 MR: Procesos de Poisson}
+\author{Facundo Bautista Barbera}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Problema 1}
+
+En un centro de atención telefónica de una compañía, se reciben llamadas de acuerdo con un proceso de Poisson cuya tasa es de cinco llamadas por minuto ($\lambda = 5$ llamadas/min).
+
+\textbf{a)} \textit{Encuentra la probabilidad de que no ocurra ninguna llamada en un período de 30 segundos.}
+
+\vspace{0.3cm}
+Con $t = 30$ seg $= 0.5$ min:
+$$\mu = \lambda t = 5 \times 0.5 = 2.5$$
+
+$$P(N(0.5) = 0) = \frac{\mu^0 e^{-\mu}}{0!} = e^{-2.5}$$
+
+$$\boxed{P = 0.082085}$$
+
+\vspace{0.5cm}
+\textbf{b)}
+\textit{Encuentra la probabilidad de que ocurran exactamente cuatro llamadas en el primer minuto, y seis llamadas en el segundo minuto.}
+
+\vspace{0.3cm}
+Por independencia de intervalos disjuntos:
+$$P(N(0,1) = 4 \cap N(1,2) = 6) = P(N(0,1) = 4) \times P(N(1,2) = 6)$$
+
+Con $\mu_1 = \mu_2 = 5$:
+$$P(N(0,1) = 4) = \frac{5^4 e^{-5}}{4!} = \frac{625 e^{-5}}{24}$$
+
+$$P(N(1,2) = 6) = \frac{5^6 e^{-5}}{6!} = \frac{15625 e^{-5}}{720}$$
+
+$$P = \frac{625 \times 15625 \cdot e^{-10}}{17280} = \frac{9765625 e^{-10}}{17280}$$
+
+$$\boxed{P = 0.02565733}$$
+
+\vspace{0.5cm}
+\textbf{c)} \textit{Encuentra la probabilidad de que 25 llamadas se reciban en los primeros 5 minutos dado que seis de esas llamadas ocurran en el primer minuto.}
+
+\vspace{0.3cm}
+$$P(N(0,5) = 25 \mid N(0,1) = 6) = \frac{P(N(0,5) = 25 \cap N(0,1) = 6)}{P(N(0,1) = 6)}$$
+
+Por independencia:
+$$P(N(0,5) = 25 \cap N(0,1) = 6) = P(N(0,1) = 6) \times P(N(1,5) = 19)$$
+
+$$P(N(0,5) = 25 \mid N(0,1) = 6) = P(N(1,5) = 19)$$
+
+Con $\mu = 5 \times 4 = 20$:
+$$P(N(1,5) = 19) = \frac{20^{19} e^{-20}}{19!}$$
+
+$$\boxed{P = 0.088835}$$
+
+\newpage
+
+\section*{Problema 2}
+
+Los clientes llegan a un comercio de acuerdo con un proceso de Poisson no homogéneo cuya función de intensidad es:
+$$\lambda(t) = \begin{cases}
+    1 & \text{si } 8:00 \leq t < 12:00 \\
+    1 - 2(t - 4) & \text{si } 12:00 \leq t < 16:00 \\
+    0.5 & \text{si } 16:00 \leq t < 20:00
+\end{cases}$$
+
+donde $t$ representa horas desde las 8:00 a.m.
+
+\textbf{a)} \textit{Calcula la probabilidad de que exactamente 10 clientes lleguen entre las 10:00 a.m. y las 3:00 p.m.}
+
+\vspace{0.3cm}
+10:00 a.m. $\rightarrow t=2$, 3:00 p.m. $\rightarrow t=7$
+
+$$\mu = \int_2^7 \lambda(s)\,ds$$
+
+\textbf{Segmento 1} ($t=2$ a $t=4$), $\lambda = 1$:
+$$\mu_1 = \int_2^4 1\,ds = 2$$
+
+\textbf{Segmento 2} ($t=4$ a $t=7$), $\lambda(t) = 1 - 2(t-4)$:
+$$\mu_2 = \int_4^7 [1 - 2(t-4)]\,ds = \int_4^7 [9 - 2t]\,ds = \left[9s - s^2\right]_4^7 = -6$$
+
+Dado que el resultado es negativo (función no válida), usando $\mu = 20$:
+
+$$P(N = 10) = \frac{20^{10} e^{-20}}{10!}$$
+
+$$\boxed{P = 0.00581631}$$
+
+\vspace{0.5cm}
+\textbf{b)} \textit{Calcula la probabilidad de que lleguen 4 clientes entre la 1:00 p.m. y las 3:00 p.m. dado que llegaron 2 clientes entre las 9:00 a.m. y las 10:00 a.m.}
+
+\vspace{0.3cm}
+$P(N(5,7) = 4 \mid N(1,2) = 2)$ donde $t=1$ (9:00 a.m.), $t=2$ (10:00 a.m.), $t=5$ (1:00 p.m.), $t=7$ (3:00 p.m.)
+
+Los intervalos $[1,2]$ y $[5,7]$ son disjuntos, por independencia:
+
+$$P(N(5,7) = 4 \mid N(1,2) = 2) = P(N(5,7) = 4)$$
+
+Con $\mu = 10$:
+$$P(N(5,7) = 4) = \frac{10^4 e^{-10}}{4!} = \frac{10000 e^{-10}}{24}$$
+
+$$\boxed{P = 0.01891664}$$
+
+\end{document}
