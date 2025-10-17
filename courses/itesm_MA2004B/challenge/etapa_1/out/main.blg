@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: apalike.bst
+Database file #1: references.bib
+Warning--to sort, need author or key in dairy_optimization2021
+Warning--to sort, need author or key in additive_manufacturing2019
+Warning--empty author in additive_manufacturing2019
+Warning--empty journal in additive_manufacturing2019
+Warning--empty author in dairy_optimization2021
+You've used 24 entries,
+            1935 wiz_defined-function locations,
+            579 strings with 6910 characters,
+and the built_in function-call counts, 6719 in all, are:
+= -- 666
+> -- 242
+< -- 21
++ -- 79
+- -- 78
+* -- 477
+:= -- 1292
+add.period$ -- 70
+call.type$ -- 24
+change.case$ -- 161
+chr.to.int$ -- 23
+cite$ -- 31
+duplicate$ -- 270
+empty$ -- 435
+format.name$ -- 104
+if$ -- 1251
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 11
+newline$ -- 120
+num.names$ -- 66
+pop$ -- 120
+preamble$ -- 1
+purify$ -- 159
+quote$ -- 0
+skip$ -- 221
+stack$ -- 0
+substring$ -- 312
+swap$ -- 6
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 136
+warning$ -- 5
+while$ -- 46
+width$ -- 0
+write$ -- 290
+(There were 5 warnings)

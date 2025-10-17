@@ -1,0 +1,105 @@
+%! Author: Facundo Bautista Barbera A01066843
+%! Date: 2025-09-25
+%! TEX root = tarea_1_mr.tex
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+
+\title{Tarea 1 MR}
+\author{Facundo Bautista Barbera A01066843}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Planteamiento del problema}
+
+\begin{quote}
+	\itshape
+	Una patrulla policiaca vigila un vecindario conocido por sus actividades pandilleriles.
+	Durante un patrullaje hay 60\% de probabilidades  de llegar a tiempo al lugar  donde se requiere ayuda; si no sucede algo, continuará el patrullaje regular.
+	Después de recibir una llamada, hay 10\% de probabilidad de cancelación (en cuyo caso el patrullaje normal se reanuda), y 30\% de probabilidad de que la unidad ya esté respondiendo a la llamada anterior.
+	Cuando la patrulla llega a la escena del suceso, hay 10\% de probabilidades de que los instigadores hayan desaparecido (en cuyo caso reanuda su patrullaje), y 40\% de probabilidades de que se haga una aprehensión de inmediato.
+	De otro modo, los oficiales rastrearán el área.
+	Si ocurre una aprehensión , hay 60\% de probabilidades de trasladar a los sospechosos a la estación de policía, de lo contrario son liberados y la unidad regresa a patrullar.
+\end{quote}
+
+\section*{Estados y sus probabilidades}
+
+Para empezar este problema cuenta con 5 estados:
+\begin{itemize}
+	\item E1, Patrullaje: Se podría considerar como un estado inicial. La patrulla siempre vuelve a este estado, por lo que podemos decir que es recurrente.
+	\item E2, Respondiendo: Este estado aparenta ser transitorio, pero se puede clasificar como recurrente también. No importa el estado de la cadena, siempre se volverá a este paso.
+	\item E3, En escena: Otro estado recurrente, siempre se vuelve a este estado en algún punto.
+	\item E4, Rastreo: Estado transitorio, que va a al estado de patrullaje o al estado de Traslado.
+	\item E5, Traslado: Transitorio, siempre regresa al estado de patrullaje,
+\end{itemize}
+
+\section*{Matriz de transición}
+\[
+	P =
+	\begin{array}{c|ccccc}
+		   & E1  & E2  & E3  & E4  & E5  \\
+		\hline
+		E1 & 0.4 & 0.6 & 0   & 0   & 0   \\
+		E2 & 0.1 & 0.3 & 0.6 & 0   & 0   \\
+		E3 & 0.1 & 0   & 0   & 0.5 & 0.4 \\
+		E4 & 0.4 & 0   & 0   & 0   & 0.6 \\
+		E5 & 1   & 0   & 0   & 0   & 0
+	\end{array}
+\]
+
+\section*{Preguntas}
+
+\subsection*{Si la patrulla se encuentra en este momento en la escena de una llamada, determine la probabilidad de que haga una aprehensión en dos patrullajes.}
+
+La única forma de llegar a E5 desde E2 en dos pasos, es específicamente pasando por E4.
+Por lo que calculamos la probabilidad conjunta de esto:
+
+$$
+	E3 \rightarrow E4 \rightarrow E5 = 0.5 \times 0.6 = 0.30
+$$
+
+La probabilidad de llegar a E5 en dos pasos estando en E3 es de del 30\%.
+
+\subsection*{Si la patrulla se encuentra en este momento en su patrullaje regular, determine la probabilidad de que haga una aprehensión en 10 patrullajes. Utilice una calculadora en línea para realizar los cálculos.}
+
+Idealmente lo que se busca es que, a partir del estado $E1$, calculemos la probabilidad de estar en $E5$ en exactamente 10 pasos, es decir $t=10$.
+
+Se puede usar la siguiente expresión junto con la matriz de transición:
+
+$$
+	\mathbb{P}(X_{10}=E5 \mid X_0=E1) = (P^{10})_{E1,E5}.
+$$
+
+Usando una calculadora en línea se obtiene:
+
+$$
+	(P^{10})_{E1,E5} \approx 0.1261.
+$$
+
+\newpage
+\section*{Simulación}
+
+Para la ultima pregunta:
+\begin{quote}
+	\itshape
+	Si la patrulla hace una aprehensión, realiza una simulación para encontrar la probabilidad de que, a largo plazo, la patrulla traslade a los sospechosos a la estación de policía.
+\end{quote}
+
+Se creo un código de python que devolvió la siguiente gráfica:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Figure_1.png}
+	\caption{Simulación de la probabilidad a largo plazo}
+	\label{fig:simulation}
+\end{figure}
+
+La probabilidad final calculada (aproximada) es de $0.6$
+
+\end{document}
+
